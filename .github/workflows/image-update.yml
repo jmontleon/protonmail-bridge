@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "15 23 * * *"
+  push:
+    branches:
+    - on
 env:
   IMAGE_NAME: quay.io/jmontleon/protonmail-bridge
   VERSION: latest
