@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "15 23 * * *"
 env:
-  IMAGE_NAME: quay.io/jmontleon/protonmail-bridge:latest
+  IMAGE_NAME: quay.io/jmontleon/protonmail-bridge
   VERSION: latest
 jobs:
   push:
