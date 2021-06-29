@@ -6,7 +6,7 @@ on:
     - cron: "15 23 * * *"
   push:
     branches:
-    - on
+    - main
 env:
   IMAGE_NAME: quay.io/jmontleon/protonmail-bridge
   VERSION: latest
