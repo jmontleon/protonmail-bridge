@@ -1,4 +1,4 @@
 #!/bin/bash
-socat TCP-LISTEN:25,fork TCP:127.0.0.1:1025 &
+ncat -k -l 25 < smtp_to_bridge | ncat 127.0.0.1 1025 > smtp_to_bridge &
 mkfifo /tmp/fifo
-{ echo info ; cat /tmp/fifo ; } | protonmail-bridge --cli
+cat /tmp/fifo | protonmail-bridge --cli
